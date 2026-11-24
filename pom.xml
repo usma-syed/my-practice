@@ -1,42 +1,22 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+    <name>My GitHub Project</name>
+    <version>1.0.0</version>
+    <description>A sample project configuration file.</description>
 
-    <groupId>com.example</groupId>
-    <artifactId>madhuapp</artifactId>
-    <version>2.0.0</version>
-    <packaging>war</packaging>
+    <author>Developer</author>
 
-	<properties>
-		<docker.image.prefix>kammana</docker.image.prefix>
-		<sonar.host.url>http://3.83.18.215:9000/</sonar.host.url>
+    <settings>
+        <language>Java</language>
+        <build>1.0</build>
+        <debug>true</debug>
+    </settings>
 
-	</properties>
+    <dependencies>
+        <dependency>
+            <name>core-library</name>
+            <version>1.0.0</version>
+        </dependency>
+    </dependencies>
 
-	<distributionManagement>
-		 <snapshotRepository>
-		    <id>NexusRepo</id>
-		    <url>http://34.201.119.102:8081/repository/batch16d-repo-snapshot/</url>
-		 </snapshotRepository>
-		
-		<repository>
-		    <id>NexusRepo</id>
-		    <url>http://34.201.119.102:8081/repository/batch16d-repo-release/</url>
-		</repository>
-  	</distributionManagement>
-    
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-war-plugin</artifactId>
-                <version>3.3.2</version>
-                <configuration>
-                    <failOnMissingWebXml>false</failOnMissingWebXml>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
 </project>
-
